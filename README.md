@@ -6,7 +6,7 @@ local Window = Library.CreateLib("RobILGame Hub", "Ocean")
 local Tab = Window:NewTab("Welcome")
 
 local Tab = Window:NewTab("Player")
-local ScriptsSection = Tab:NewSection("Player")
+local ScriptsSection = Tab:NewSection("Speed/Jump")
 
 --  Player Buttons
 ScriptsSection:NewSlider("WalkSpeed", "More Speed", 500, 16, function(s)
@@ -17,12 +17,16 @@ ScriptsSection:NewSlider("JumpPower", "More Jump", 500, 50, function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+local ScriptsSection = Tab:NewSection("Chat")
+
 ScriptsSection:NewButton("Spam Chat", "Spam The Chat", function()
     while true do wait(1) 
  
 local A_1   = "LOL" local A_2 = "All" 
 local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
 end)
+
+local ScriptsSection = Tab:NewSection("Infinity Jump")
 
 ScriptsSection:NewButton("Infinity Jump", "Give You Infinity Jump", function()
    
@@ -33,6 +37,8 @@ game:GetService("UserInputService").jumpRequest:Connect(function()
     end
 end)
 end)
+
+local ScriptsSection = Tab:NewSection("Fly/Noclip")
 
 -- Toggles
 ScriptsSection:NewToggle("E To Fly", "Press E To Fly", function(state)
