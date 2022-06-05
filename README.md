@@ -4,6 +4,7 @@ local Window = Library.CreateLib("RobILGame Hub", "Ocean")
 
 -- Welcome
 local Tab = Window:NewTab("Welcome")
+local ScriptsSection = Tab:NewSection("Fly/Noclip")
 
 local Tab = Window:NewTab("Player")
 local ScriptsSection = Tab:NewSection("Speed/Jump")
