@@ -194,11 +194,29 @@ local Tab = Window:NewTab("OtherPlayers")
 
 -- Admin
 local Tab            = Window:NewTab("Admin")
-local ScriptsSection = Tab:NewSection("Admin Script")
+local ScriptsSection = Tab:NewSection("Infinite Yield")
 
 
 ScriptsSection:NewButton("Infinite Yield", "Give You Infinite Yield Admim", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+local ScriptsSection = Tab:NewSection("CMD-X")
+ScriptsSection:NewButton("CMD-X", "Give You CMD-X Admim", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+local ScriptsSection = Tab:NewSection("Reviz Admin")
+
+ScriptsSection:NewButton("Reviz Admin", "Give You Reviz Admin", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/pyzjWNhk'),true))()
+end)
+
+local ScriptsSection = Tab:NewSection("Fates Admin")
+
+ScriptsSection:NewButton("Fates Admin", "Give You Fates Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
 end)
 
 -- ESP
