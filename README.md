@@ -4,7 +4,7 @@ local Window = Library.CreateLib("RobILGame Hub", "Ocean")
 
 -- Welcome
 local Tab = Window:NewTab("Welcome")
-local ScriptsSection = Tab:NewSection("Welcome To RobILGame Hub!")
+local ScriptsSection = Tab:NewSection("Welcome To Yohav Hub!")
 local ScriptsSection = Tab:NewSection("Freeilaygame is Copy Games!")
 local ScriptsSection = Tab:NewSection("So Let's Destroy His Games!")
 local ScriptsSection = Tab:NewSection("Have Enjoy!")
@@ -303,8 +303,8 @@ end)
 
 -- Stats
 local Tab            = Window:NewTab("Stats")
-local ScriptsSection = Tab:NewSection("Hub: RobILGame")
+local ScriptsSection = Tab:NewSection("Hub: Yohav")
 local ScriptsSection = Tab:NewSection("Version: 1.0.0")
-local ScriptsSection = Tab:NewSection("Developers: RobILGame Community")
+local ScriptsSection = Tab:NewSection("Developers: Yohav Community")
 local ScirptsSection = Tab:NewSection("Attach Game: בוא ללמוד עדכון ענק")
 local ScirptsSection = Tab:NewSection("Exploit Use: Any")
