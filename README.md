@@ -145,34 +145,42 @@ end)
 
 -- Gode Mode
 ScriptsSection:NewButton("Gode Mode", "Gode Mode Player", function()
+    -- Godmode Jake11Price and JasonKaranikYoutube. Universalized by EthanMcBloxxer @ gist.github.com/EthanMcBloxxer/22676838e35bdab12a1c1d331e6f2ee7
+-- Script saves your position, speed, and tools.
 
-local player = game.Players.LocalPlayer
-
-if player.Character then
-
-if player.Character:FindFirstChild("Humanoid") then
-
-player.Character.Humanoid.Name = "1"
-
+local PlayerName = (game.Players.LocalPlayer.Name)
+local SavedTools = Instance.new('Folder',game:GetService('ReplicatedStorage'))
+SavedTools.Name = 'SavedTools'
+local TargetPlayer = 'LocalPlayer'
+_G.Looop = true
+while _G.Looop == true do
+    wait(0.01)
+    local saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    local A_1 = "LocalPlayer"
+    local SavedSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+    if game:GetService("Workspace")[PlayerName].Humanoid.Health == 0 then
+        for i, v in pairs(game:GetService('Players').LocalPlayer.Backpack:GetChildren()) do
+            if v then
+                v.Parent = SavedTools
+            end
+        end
+        for i,v in pairs(game:GetService('Players')[TargetPlayer].Character:GetChildren()) do
+            if v:IsA('Tool') then
+                v.Parent = SavedTools
+            end
+        end
+        local Event = game:GetService("Workspace").Remote.loadchar
+        Event:InvokeServer(A_1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = SavedSpeed
+        for i, v in pairs(SavedTools:GetChildren()) do
+            if v then
+                v.Parent = game:GetService('Players')[TargetPlayer].Backpack
+            end
+        end
+        SavedTools:ClearAllChildren()
+    end
 end
-
-local l = player.Character["1"]:Clone()
-
-l.Parent = player.Character
-
-l.Name = "Humanoid"; wait(0.1)
-
-player.Character["1"]:Destroy()
-
-workspace.CurrentCamera.CameraSubject = player.Character.Humanoid
-
-player.Character.Animate.Disabled = true; wait(0.1)
-
-player.Character.Animate.Disabled = false
-
-end
-
-print("finished.")
 end)
 
 -- New Teleports Tab
