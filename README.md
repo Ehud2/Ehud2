@@ -348,3 +348,16 @@ local ScriptsSection = Tab:NewSection("Version: 1.0.0")
 local ScriptsSection = Tab:NewSection("Developers: Yohav Community")
 local ScirptsSection = Tab:NewSection("Attach Game: בוא ללמוד חזר")
 local ScirptsSection = Tab:NewSection("Exploit Use: Any")
+
+-- Tools
+local Tab            = Window:NewTab("Tools")
+local ScriptsSection = Tab:NewSection("Btools")
+
+ScriptsSection:NewButton("Btools", "Give You Btools", function()
+    a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+a.BinType = 2
+b = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+b.BinType = 3
+c = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+c.BinType = 4
+end)
