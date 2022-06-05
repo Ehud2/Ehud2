@@ -174,7 +174,7 @@ local ScriptsSection = Tab:NewSection("Admin Script")
 
 
 ScriptsSection:NewButton("Infinite Yield", "Give You Infinite Yield Admim", function()
-    
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 -- ESP
