@@ -133,7 +133,7 @@ Fly()
     end
 end)
 
-local ScriptsSection = Tab:NewSection("Refresh")
+local ScriptsSection = Tab:NewSection("Character")
 
 -- Refresh
 ScriptsSection:NewButton("Refresh", "Refresh Player", function()
@@ -141,6 +141,38 @@ ScriptsSection:NewButton("Refresh", "Refresh Player", function()
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(players,v.Name)
 end
+end)
+
+-- Gode Mode
+ScriptsSection:NewButton("Gode Mode", "Gode Mode Player", function()
+
+local player = game.Players.LocalPlayer
+
+if player.Character then
+
+if player.Character:FindFirstChild("Humanoid") then
+
+player.Character.Humanoid.Name = "1"
+
+end
+
+local l = player.Character["1"]:Clone()
+
+l.Parent = player.Character
+
+l.Name = "Humanoid"; wait(0.1)
+
+player.Character["1"]:Destroy()
+
+workspace.CurrentCamera.CameraSubject = player.Character.Humanoid
+
+player.Character.Animate.Disabled = true; wait(0.1)
+
+player.Character.Animate.Disabled = false
+
+end
+
+print("finished.")
 end)
 
 -- New Teleports Tab
