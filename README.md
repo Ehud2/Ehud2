@@ -24,6 +24,11 @@ local A_1   = "LOL" local A_2 = "All"
 local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
 end)
 
+ScriptsSection:NewButton("Noclip", "Give You Noclip", function()
+   local s = loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
+print(s)
+end)
+
 -- Toggles
 ScriptsSection:NewToggle("E To Fly", "Press E To Fly", function(state)
     if state then
@@ -118,26 +123,6 @@ ScriptsSection:NewButton("Refresh", "Refresh Player", function()
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(players,v.Name)
 end
-end)
-
-ScriptsSection:NewButton("JumpPower", "More Jump", function()
-    noclip = false
-game:GetService('RunService').Stepped:connect(function()
-if noclip then
-game:service'Players'.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-plr = game:service'Players'.LocalPlayer
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
-
-if key == "n" then
-noclip = not noclip
-game:service'Players'.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-print('Loaded')
-print('Press "n" to noclip')
 end)
 
 -- New Teleports Tab
