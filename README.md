@@ -25,8 +25,23 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 end)
 
 ScriptsSection:NewButton("Noclip", "Give You Noclip", function()
-   local s = loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxScripts52/noclip/main/noclip.lua"), true))()
-print(s)
+    noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+ 
+if key == "n" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Loaded')
+print('Press "n" to noclip')
 end)
 
 -- Toggles
