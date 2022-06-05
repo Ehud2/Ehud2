@@ -1,6 +1,6 @@
 -- Start
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("RobILGame Hub", "Ocean")
+local Window = Library.CreateLib("Yohav Hub", "Ocean")
 
 -- Welcome
 local Tab = Window:NewTab("Welcome")
