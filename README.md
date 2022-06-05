@@ -17,7 +17,7 @@ ScriptsSection:NewSlider("JumpPower", "More Jump", 500, 50, function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-local Section = Tab:NewSection("Chat")
+local ScriptsSection = Tab:NewSection("Chat")
 
 ScriptsSection:NewButton("Spam Chat", "Spam The Chat", function()
     while true do wait(1) 
