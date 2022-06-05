@@ -2,7 +2,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("RobILGame Hub", "Ocean")
 
-
+-- Welcome
 local Tab = Window:NewTab("Welcome")
 
 local Tab = Window:NewTab("Player")
@@ -174,7 +174,7 @@ local ScriptsSection = Tab:NewSection("Admin Script")
 
 
 ScriptsSection:NewButton("Infinite Yield", "Give You Infinite Yield Admim", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    
 end)
 
 -- ESP
@@ -258,3 +258,11 @@ game.Players.PlayerAdded:connect(function(objPlayer)
     end)
 end)
 end)
+
+-- Stats
+local Tab            = Window:NewTab("Stats")
+local ScriptsSection = Tab:NewSection("Hub: RobILGame")
+local ScriptsSection = Tab:NewSection("Version: 1.0.0")
+local ScriptsSection = Tab:NewSection("Developers: RobILGame Community")
+local ScirptsSection = Tab:NewSection("Attach Game: בוא ללמוד עדכון ענק")
+local ScirptsSection = Tab:NewSection("Exploit Use: Any")
