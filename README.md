@@ -128,6 +128,8 @@ Fly()
     end
 end)
 
+local ScriptsSection = Tab:NewSection("Refresh")
+
 -- Refresh
 ScriptsSection:NewButton("Refresh", "Refresh Player", function()
     table.clear(players)
