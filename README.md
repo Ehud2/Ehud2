@@ -327,14 +327,14 @@ Fly()
     end
 end)
 
-local ScriptsSection = Tab:NewSection("Character")
-
 -- Rejoin
 local ScriptsSection = Tab:NewSection("Rejoin")
 
 ScriptsSection:NewButton("Rejoin", "Rejoin Game", function()
     game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
+
+local ScriptsSection = Tab:NewSection("Character")
 
 -- Refresh
 ScriptsSection:NewButton("Refresh", "Refresh Player", function()
