@@ -242,23 +242,22 @@ coroutine.resume(cors[i])
 end
 end)
 
-local ScriptsSection = Tab:NewSection("Fly/Noclip")
+-- F To Fly
+local ScriptsSection = Tab:NewSection("F To Fly")
 
--- Toggles
-ScriptsSection:NewToggle("E To Fly", "Press E To Fly", function(state)
-    if state then
-        repeat wait() 
-    until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+ScriptsSection:NewButton("F To Fly", "Press F To Fly", function(state)
+    repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
 repeat wait() until mouse
 local plr = game.Players.LocalPlayer 
-local torso = plr.Character.Torso 
+local torso = plr.Character.Head 
 local flying = false
 local deb = true 
 local ctrl = {f = 0, b = 0, l = 0, r = 0} 
 local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 50 
-local speed = 0 
+local maxspeed = 400 
+local speed = 5000 
 
 function Fly() 
 local bg = Instance.new("BodyGyro", torso) 
@@ -299,7 +298,7 @@ bv:Destroy()
 plr.Character.Humanoid.PlatformStand = false 
 end 
 mouse.KeyDown:connect(function(key) 
-if key:lower() == "e" then 
+if key:lower() == "f" then 
 if flying then flying = false 
 else 
 flying = true 
@@ -327,9 +326,53 @@ ctrl.r = 0
 end 
 end)
 Fly()
-    else
-        print("Toggle Off")
-    end
+end)
+
+-- N To Noclip
+ScriptsSection:NewButton("N To Noclip", "Press N To Noclip", function()
+    local Character = game.Players.LocalPlayer.Character
+Noclip = false
+
+game:GetService('RunService').Stepped:Connect(function()
+	
+	if Noclip then
+		
+		for i,v in pairs(Character:GetChildren()) do
+			
+			if v.Name == ("UpperTorso") or v.Name == ("LowerTorso") or v.Name == ("Head") or v.Name == ("HumanoidRootPart") then
+				
+				v.CanCollide = false
+				
+			end
+			
+		end
+		
+	end
+	
+end)
+
+local LocalPlayer = game.Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+
+Mouse.KeyDown:Connect(function(Key)
+	
+	if Key == "n" then
+		
+		Noclip = not Noclip
+		
+		for i,v in pairs(Character:GetChildren()) do
+
+			if v.Name == ("UpperTorso") or v.Name == ("LowerTorso") or v.Name == ("Head") or v.Name == ("HumanoidRootPart") then
+
+				v.CanCollide = false
+
+			end
+
+		end
+		
+	end
+	
+end)
 end)
 
 -- Character
