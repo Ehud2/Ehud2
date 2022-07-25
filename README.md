@@ -74,7 +74,12 @@ ScriptsSection:NewButton("Kill Me", "Kill Your Player", function()
 end)
 
 
+-- Rejoin
+local ScriptsSection = Tab:NewSection("Rejoin")
 
+ScriptsSection:NewButton("Rejoin", "Rejoin Game", function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
 
     -- Spectator Players
 local ScriptsSection = Tab:NewSection("Spectator Players")
@@ -327,6 +332,7 @@ Fly()
     end
 end)
 
+-- Character
 local ScriptsSection = Tab:NewSection("Character")
 
 -- Refresh
@@ -367,13 +373,6 @@ player.Character.Animate.Disabled = false
 end
  
 print("finished.")
-end)
-
--- Rejoin
-local ScriptsSection = Tab:NewSection("Rejoin")
-
-ScriptsSection:NewButton("Rejoin", "Rejoin Game", function()
-    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
 
 -- New Teleports Tab
