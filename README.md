@@ -9,8 +9,32 @@ local ScriptsSection = Tab:NewSection("Freeilaygame is Copy Games!")
 local ScriptsSection = Tab:NewSection("So Let's Destroy His Games!")
 local ScriptsSection = Tab:NewSection("Have Enjoy!")
 
+-- LocalOptions
+local Tab = Window:NewTab("LocalOptions")
+local ScriptsSection = Tab:NewSection("Map")
 
-local Tab = Window:NewTab("Player")
+ScriptsSection:NewButton("Alaways Day", "Set Alaways Day", function()
+    game.Lighting.ClockTime = 14
+end)
+
+ScriptsSection:NewButton("Alaways Night", "Set Alaways Night", function()
+    game.Lighting.ClockTime = 1
+end)
+
+local ScriptsSection = Tab:NewSection("ForceField")
+
+ScriptsSection:NewButton("FF All", "Set FF For All Players", function()
+    -- This Script will work in script builder
+
+for i, v in pairs(game.Players:GetPlayers()) do
+	
+
+    ff = Instance.new("ForceField", v.Character)
+    
+    
+    end
+end)
+
 local ScriptsSection = Tab:NewSection("Speed/Jump")
 
 --  Player Buttons
