@@ -328,6 +328,8 @@ end)
 Fly()
 end)
 
+local ScriptsSection = Tab:NewSection("N To Noclip")
+
 -- N To Noclip
 ScriptsSection:NewButton("N To Noclip", "Press N To Noclip", function()
     local Character = game.Players.LocalPlayer.Character
