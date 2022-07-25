@@ -196,7 +196,7 @@ TeleportsSection:NewButton("Guard Room", "Teleport To The  Guard Room", function
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(176.817535, -30.4848118, 264.669189, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 end)
 
-TeleportsSection:NewButton("Microphone", "Teleport To The Secretariat", function()
+TeleportsSection:NewButton("Secretariat", "Teleport To The Secretariat", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(170.51446533203125, -16.974998474121094, 167.9423828125)
 end)
 
@@ -235,6 +235,12 @@ end)
 
 -- Others Players
 local Tab = Window:NewTab("OtherPlayers")
+
+local ScriptsSection = Tab:NewSection("Fling All")
+
+ScriptsSection:NewButton("Fling All", "Fling All Players", function()
+	loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop%20fling%20all'))()
+end)
 
 -- Admin
 local Tab            = Window:NewTab("Admin")
